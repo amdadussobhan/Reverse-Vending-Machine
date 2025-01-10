@@ -5,12 +5,13 @@ from vending.views import CategoryView, ProductView, CartView, OrderView
 from rest_framework import routers
 
 route = routers.DefaultRouter()
-route.register("category", CategoryView, basename="category")
-route.register("product", ProductView, basename="product")
-route.register("cart", CartView, basename="cart")
-route.register("order", OrderView, basename="order")
+route.register("categories", CategoryView, basename="categories")
+route.register("products", ProductView, basename="products")
+route.register("carts", CartView, basename="carts")
+route.register("orders", OrderView, basename="orders")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(route.urls)),
+    path('api/', include(route.urls)),
 ]
