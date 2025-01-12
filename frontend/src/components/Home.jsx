@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
+import ProductCard from './ProductCard'
 
 const Home = () => {
   const [products, setProducts] = useState(null)
@@ -20,11 +21,7 @@ const Home = () => {
       <div className='container'>
         {
           products.map(product => (
-            <div key={product.id}>
-              <h1>{product.name}</h1>
-              <p>{product.description}</p>
-              <p>{product.price}</p>
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))
         }
       </div>
