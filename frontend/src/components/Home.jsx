@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     products && products.length > 0 ? (
-      <div className='container'>
+      <div className='container mt-2'>
         {
           products.map(product => (
             <ProductCard key={product.id} product={product} />

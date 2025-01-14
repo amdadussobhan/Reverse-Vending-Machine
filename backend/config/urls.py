@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from vending.views import CategoryView, ProductView, CartView, OrderView
 from rest_framework import routers
 
@@ -15,3 +17,5 @@ urlpatterns = [
     path('', include(route.urls)),
     path('api/', include(route.urls)),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
