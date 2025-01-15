@@ -18,6 +18,12 @@ const Navbar = () => {
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ml-5">
+                        <li className="nav-item d-flex align-items-center">
+                            <Link className="btn btn-outline-dark mx-3" to="/login">Upload Image</Link>
+                            <h5 className="d-inline mb-0 me-2">Balance: 00</h5>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

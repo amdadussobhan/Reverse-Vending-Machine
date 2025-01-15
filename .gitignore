@@ -204,3 +204,5 @@ bower_components/
 
 # TypeScript
 *.tsbuildinfo
+
+media/
