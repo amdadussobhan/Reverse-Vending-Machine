@@ -10,6 +10,7 @@ const Home = () => {
         method: 'GET',
         url: 'http://127.0.0.1:8000/api/products/',
       }).then(res => {
+        console.log(res.data);
         setProducts(res.data);
       })
     }
@@ -25,7 +26,7 @@ const Home = () => {
           ))
         }
       </div>
-    ) : (<p>No Product</p>)
+    ) : (<h3 className='container text-center my-5 py-5'>No Product Found</h3>)
   )
 }
 
